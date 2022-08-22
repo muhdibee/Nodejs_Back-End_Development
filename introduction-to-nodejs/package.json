@@ -1,5 +1,5 @@
 {
-  "name": "introduction-:to-nodejs",
+  "name": "introduction-to-nodejs",
   "version": "1.0.0",
   "description": "\"\"\u001b[working with pakage manager",
   "main": "hello-world.js",
@@ -13,5 +13,8 @@
     "manager"
   ],
   "author": "Muhammad Ibrahim",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "mathjs": "^11.0.1"
+  }
 }
