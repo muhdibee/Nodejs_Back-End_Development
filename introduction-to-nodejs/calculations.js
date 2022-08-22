@@ -1,5 +1,5 @@
-const math = require("mathjs");
+import { mean, round } from 'mathjs';
 
-let mean = math.mean([1,2,3,4,7,8,54])
+let mean_Value = mean([1,2,3,4,7,8,54])
 
-console.log(math.round(mean));
+console.log(round(mean_Value));
