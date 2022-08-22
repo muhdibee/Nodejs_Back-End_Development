@@ -1,0 +1,17 @@
+{
+  "name": "introduction-:to-nodejs",
+  "version": "1.0.0",
+  "description": "\"\"\u001b[working with pakage manager",
+  "main": "hello-world.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Nodejs",
+    "package.json",
+    "package",
+    "manager"
+  ],
+  "author": "Muhammad Ibrahim",
+  "license": "MIT"
+}
