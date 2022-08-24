@@ -30,3 +30,9 @@ console.log('path base name: ' + baseName);
 // Get the path extension name.
  const extensionName = path.extname('C:/Users/Muhammad Ibrahim/Downloads/Nodejs_Back-End_Development/nodejs-core/path.js');
  console.log('path extension name: ' + extensionName);
+
+
+ // The path.join method is used to join multiple paths together to create a single normalized path.
+ // Join 3 paths together
+ const joinPaths = path.join('Nodejs_Back-End_Development', 'nodejs-core', 'path.js');
+ console.log('Resulting path: ' + joinPaths);
