@@ -36,3 +36,8 @@ console.log('path base name: ' + baseName);
  // Join 3 paths together
  const joinPaths = path.join('Nodejs_Back-End_Development', 'nodejs-core', 'path.js');
  console.log('Resulting path: ' + joinPaths);
+
+// The path.resolve() provides the current working directory
+ // Get current working directory
+ const cwd = path.resolve();
+ console.log('Resulting path: ' + cwd);
