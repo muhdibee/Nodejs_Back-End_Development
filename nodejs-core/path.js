@@ -26,7 +26,7 @@ const baseName = path.basename(('C:/Users/Muhammad Ibrahim/Downloads/Nodejs_Back
 console.log('path base name: ' + baseName);
 
 
-// // The path.extname is used to get the extension of file / path.
-// // Get the path extension name.
-//  const extensionName = path.extname('C:/Users/Muhammad Ibrahim/Downloads/Nodejs_Back-End_Development/nodejs-core/path.js');
-//  console.log('path extension name: ' + extensionName);
+// The path.extname is used to get the extension of file / path.
+// Get the path extension name.
+ const extensionName = path.extname('C:/Users/Muhammad Ibrahim/Downloads/Nodejs_Back-End_Development/nodejs-core/path.js');
+ console.log('path extension name: ' + extensionName);
