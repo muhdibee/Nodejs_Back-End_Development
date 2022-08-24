@@ -14,10 +14,10 @@ const separator = path.sep;
 console.log('path Separator: ' + separator);
 
 
-// // the path.dirname is used to get the directory portion of a path
-// // Get a path's directory name
-// const dirName = path.dirname('C:/Users/Muhammad Ibrahim/Downloads/Nodejs_Back-End_Development/nodejs-core/path.js');
-// console.log('path base directory name: ' + dirName);
+// the path.dirname is used to get the directory portion of a path
+// Get a path's directory name
+const dirName = path.dirname('C:/Users/Muhammad Ibrahim/Downloads/Nodejs_Back-End_Development/nodejs-core/path.js');
+console.log('path base directory name: ' + dirName);
 
 
 // // the path.basename is the last file or folder in a path
