@@ -20,13 +20,13 @@ const dirName = path.dirname('C:/Users/Muhammad Ibrahim/Downloads/Nodejs_Back-En
 console.log('path base directory name: ' + dirName);
 
 
-// // the path.basename is the last file or folder in a path
-// // Get the path base name
-// const baseName = path.basename(('C:/Users/Muhammad Ibrahim/Downloads/Nodejs_Back-End_Development/nodejs-core/path.js'));
-// console.log('path base name: ' + baseName);
+// the path.basename is the last file or folder in a path
+// Get the path base name
+const baseName = path.basename(('C:/Users/Muhammad Ibrahim/Downloads/Nodejs_Back-End_Development/nodejs-core/path.js'));
+console.log('path base name: ' + baseName);
 
 
 // // The path.extname is used to get the extension of file / path.
-// // Get the path extension name
+// // Get the path extension name.
 //  const extensionName = path.extname('C:/Users/Muhammad Ibrahim/Downloads/Nodejs_Back-End_Development/nodejs-core/path.js');
 //  console.log('path extension name: ' + extensionName);
