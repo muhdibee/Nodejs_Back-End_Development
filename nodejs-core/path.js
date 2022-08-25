@@ -35,9 +35,15 @@ console.log('path base name: ' + baseName);
  // The path.join method is used to join multiple paths together to create a single normalized path.
  // Join 3 paths together
  const joinPaths = path.join('Nodejs_Back-End_Development', 'nodejs-core', 'path.js');
- console.log('Resulting path: ' + joinPaths);
+ console.log('Resulting path after join: ' + joinPaths);
 
 // The path.resolve() provides the current working directory
  // Get current working directory
  const cwd = path.resolve();
- console.log('Resulting path: ' + cwd);
+ console.log('Current working directory: ' + cwd);
+
+
+// The path.dirname(__dirname) method provides the path hosting the script/application being executed.
+ // Get the script/code path
+ const dir = path.dirname(__dirname);
+ console.log('Path hosting script: ' + dir);
