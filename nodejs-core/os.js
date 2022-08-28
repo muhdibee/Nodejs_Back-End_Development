@@ -19,6 +19,10 @@ console.log(`uptime: ${Math.round(os.uptime/60)} Mins`);
 const hostname = os.hostname();
 console.log(`hostname: ${hostname}`);
 
-// Geting the oprating system palteform. Returns the os platform to which the nodejs binary was complied.
+// Geting the oprating system paltform. Returns the os platform to which the nodejs binary was complied.
 const platform = os.platform();
 console.log(`platform: ${platform}`);
+
+// Geting the total amount of system memory. Returns an integer value.
+const totalMemory = os.totalmem();
+console.log(`totalMemory: ${totalMemory} B`);
