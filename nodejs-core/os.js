@@ -33,4 +33,7 @@ console.log(`FreeMemory: ${freeMemory} B`);
 
 // Geting information about all system cpus. Returns an array of objects containing information about each CPU.
 const cpus = os.cpus();
-console.log(`cpus: ${JSON.stringify(cpus)} B`);
+console.log(`cpus: ${JSON.stringify(cpus)}`);
+
+// Geting the number of CPUs on a machine (CPU cores)
+console.log(`cpus: ${cpus.length} Cores`);
