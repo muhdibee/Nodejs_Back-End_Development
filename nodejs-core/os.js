@@ -13,16 +13,20 @@ console.log(`System Architecture: ${sysArch}`);
 /* Geting the system uptime.
 ** Returns uptime of CPU in seconds */
 const uptime = os.uptime();
-console.log(`uptime: ${Math.round(os.uptime/60)} Mins`);
+console.log(`Uptime: ${Math.round(os.uptime/60)} Mins`);
 
 // Geting the hostname/Machine name of the operating system.
 const hostname = os.hostname();
-console.log(`hostname: ${hostname}`);
+console.log(`Hostname: ${hostname}`);
 
 // Geting the oprating system paltform. Returns the os platform to which the nodejs binary was complied.
 const platform = os.platform();
-console.log(`platform: ${platform}`);
+console.log(`Platform: ${platform}`);
 
 // Geting the total amount of system memory. Returns an integer value.
 const totalMemory = os.totalmem();
-console.log(`totalMemory: ${totalMemory} B`);
+console.log(`TotalMemory: ${totalMemory} B`);
+
+// Geting the amount of system free memory. Returns an integer value.
+const freeMemory = os.freemem();
+console.log(`FreeMemory: ${freeMemory} B`);
