@@ -15,6 +15,10 @@ console.log(`System Architecture: ${sysArch}`);
 const uptime = os.uptime();
 console.log(`uptime: ${Math.round(os.uptime/60)} Mins`);
 
-// Geting the hostname of the operating system.
+// Geting the hostname/Machine name of the operating system.
 const hostname = os.hostname();
 console.log(`hostname: ${hostname}`);
+
+// Geting the oprating system palteform. Returns the os platform to which the nodejs binary was complied.
+const platform = os.platform();
+console.log(`platform: ${platform}`);
