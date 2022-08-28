@@ -14,3 +14,7 @@ console.log(`System Architecture: ${sysArch}`);
 ** Returns uptime of CPU in seconds */
 const uptime = os.uptime();
 console.log(`uptime: ${Math.round(os.uptime/60)} Mins`);
+
+// Geting the hostname of the operating system.
+const hostname = os.hostname();
+console.log(`hostname: ${hostname}`);
