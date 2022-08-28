@@ -30,3 +30,7 @@ console.log(`TotalMemory: ${totalMemory} B`);
 // Geting the amount of system free memory. Returns an integer value.
 const freeMemory = os.freemem();
 console.log(`FreeMemory: ${freeMemory} B`);
+
+// Geting information about all system cpus. Returns an array of objects containing information about each CPU.
+const cpus = os.cpus();
+console.log(`cpus: ${JSON.stringify(cpus)} B`);
