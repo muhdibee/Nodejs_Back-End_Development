@@ -41,8 +41,6 @@ fs.stat(poemFilePath, (err,stats)=> {
         console.log('Path is a file: ', stats.isFile());
         console.log('Path is a directory: ', stats.isDirectory());
         console.log('Path size: ', stats.size);
-
-
     }
 
 });
@@ -52,11 +50,21 @@ const pathStat = fs.statSync(poemFilePath);
 console.log('Path statistics: ', pathStat);
 
 //Writing to file asynchronously
-// WriteFile() overwrites the content of the file.
-fs.writeFile(newFilePath, '\n this is a newer content', (err) => {
+// writeFile() overwrites the content of the file.
+fs.writeFile(newFilePath, content, (err) => {
     if (err) {
         console.log(err);
         return;
     }
     console.log('WriteFile Output: File written to successfully');
+});
+
+//appending to file to file asynchronously
+// appendFile() overwrites the content of the file.
+fs.appendFile(newFilePath, '\nThis is an appended sentence.', (err) => {
+    if (err) {
+        console.log(err);
+        return;
+    }
+    console.log('appendFile Output: Appending to file success');
 });
