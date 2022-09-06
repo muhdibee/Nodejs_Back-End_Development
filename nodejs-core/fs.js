@@ -6,6 +6,9 @@ const fs = require('node:fs');
 const path = require('path');
 
 const poemFilePath = path.join(__dirname, 'files', 'poem.txt');
+const newFilePath = path.join(__dirname, 'files', 'newFile.txt');
+
+const content = 'This is the content of this file.'
 
 // opening a file asyncronusly for reading
 fs.open(poemFilePath, 'r', (err, data) => {
@@ -47,3 +50,13 @@ fs.stat(poemFilePath, (err,stats)=> {
 // Getting path statistics syncronously and print them
 const pathStat = fs.statSync(poemFilePath);
 console.log('Path statistics: ', pathStat);
+
+//Writing to file asynchronously
+// WriteFile() overwrites the content of the file.
+fs.writeFile(newFilePath, '\n this is a newer content', (err) => {
+    if (err) {
+        console.log(err);
+        return;
+    }
+    console.log('WriteFile Output: File written to successfully');
+});
