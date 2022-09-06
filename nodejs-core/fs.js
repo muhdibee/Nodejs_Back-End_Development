@@ -25,6 +25,25 @@ fs.open(poemFilePath, 'r', (err, data) => {
         console.log('File read successfully.');
         console.log(data)
     })
-
-
 })
+
+// Getting path statistics asyncronously and print them
+fs.stat(poemFilePath, (err,stats)=> {
+    if(err){
+        console.log(err)
+    } else{
+        console.log('Path statistics: ', stats);
+
+        // Get specific path stat and print them
+        console.log('Path is a file: ', stats.isFile());
+        console.log('Path is a directory: ', stats.isDirectory());
+        console.log('Path size: ', stats.size);
+
+
+    }
+
+});
+
+// Getting path statistics syncronously and print them
+const pathStat = fs.statSync(poemFilePath);
+console.log('Path statistics: ', pathStat);
