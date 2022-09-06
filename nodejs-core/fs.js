@@ -52,19 +52,16 @@ console.log('Path statistics: ', pathStat);
 //Writing to file asynchronously
 // writeFile() overwrites the content of the file.
 fs.writeFile(newFilePath, content, (err) => {
-    if (err) {
-        console.log(err);
-        return;
-    }
-    console.log('WriteFile Output: File written to successfully');
+    err? console.log(err) : console.log('WriteFile Output: File written to successfully');
 });
 
 //appending to file to file asynchronously
 // appendFile() overwrites the content of the file.
 fs.appendFile(newFilePath, '\nThis is an appended sentence.', (err) => {
-    if (err) {
-        console.log(err);
-        return;
-    }
-    console.log('appendFile Output: Appending to file success');
-});
+    err? console.log('Error: ', err) : console.log('appendFile Output: Appending to file success');
+})
+
+//Deleting a file/folder
+fs.rm(path.join(__dirname, 'files', 'fileTodelete.txt'), (err) => {
+    err? console.log('Error: ', err) : console.log('File delete success.');
+})
