@@ -17,11 +17,11 @@ const SERVER = http.createServer((req, res) => {
 
         case '/books':
             res.writeHead(200)
-            res.end('Requesting for books.');
+            res.end(JSON.stringify(books));
             break;
         case '/authors':
             res.writeHead(200)
-            res.end('requesting for authors.');
+            res.end(JSON.stringify(authors));
             break;
         default:
             res.writeHead(400)
