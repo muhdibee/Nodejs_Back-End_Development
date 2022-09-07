@@ -1,2 +1,4 @@
 /node_modules/
 /introduction-to-nodejs/node_modules/
+/simple-server/node_modules
+/simple-router/node_modules

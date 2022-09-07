@@ -1,0 +1,20 @@
+{
+  "name": "simple-router",
+  "version": "1.0.0",
+  "description": "Learning simple nodejs routing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "Routing",
+    "HTTP",
+    "server"
+  ],
+  "author": "Muhammad Ibrahim",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
