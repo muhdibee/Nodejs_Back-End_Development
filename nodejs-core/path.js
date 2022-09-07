@@ -43,7 +43,9 @@ console.log('path base name: ' + baseName);
  console.log('Current working directory: ' + cwd);
 
 
-// The path.dirname(__dirname) method provides the path hosting the script/application being executed.
+/* The path.dirname(__dirname) method provides the path hosting the script/application being executed.
+The __dirname is a variable that contains the exact directory name of the running script.
+*/
  // Get the script/code path
  const dir = path.dirname(__dirname);
  console.log('Path hosting script: ' + dir);
