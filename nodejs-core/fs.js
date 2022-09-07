@@ -65,3 +65,8 @@ fs.appendFile(newFilePath, '\nThis is an appended sentence.', (err) => {
 fs.rm(path.join(__dirname, 'files', 'fileTodelete.txt'), (err) => {
     err? console.log('Error: ', err) : console.log('File delete success.');
 })
+
+//Reading a folder
+fs.readdir(path.join(__dirname, 'files'), (err, files) => {
+    err? console.log('Error: ', err) : console.log('File found: ', files);
+});
