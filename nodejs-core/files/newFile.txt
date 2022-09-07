@@ -1,2 +1,1 @@
 This is the content of this file.
-This is an appended sentence.

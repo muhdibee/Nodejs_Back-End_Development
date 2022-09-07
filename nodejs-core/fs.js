@@ -68,5 +68,15 @@ fs.rm(path.join(__dirname, 'files', 'fileTodelete.txt'), (err) => {
 
 //Reading a folder
 fs.readdir(path.join(__dirname, 'files'), (err, files) => {
-    err? console.log('Error: ', err) : console.log('File found: ', files);
+    err? console.log('1-Error: ', err) : console.log('File found: ', files);
 });
+
+//Creating/making a folder
+fs.mkdir(path.join(__dirname, 'newfolder'), (err) => {
+    err? console.log('2-Error: ', err) : console.log('Make dir.: Folder created successfully.');
+});
+
+//Deleting a file/folder
+fs.rmdir(path.join(__dirname, 'newfolder'), (err) => {
+    err? console.log('3-Error: ', err) : console.log('File delete success.');
+})
