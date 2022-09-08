@@ -4,7 +4,7 @@ const http = require('http');
 // Requiring fixture module
 const {books, authors} = require('./fixtures');
 
-const HOSTNAME = 'localhost';
+const HOSTNAME = '0.0.0.0';
 const PORT = 3000;
 
 //Create a server.

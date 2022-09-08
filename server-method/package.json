@@ -1,7 +1,7 @@
 {
-  "name": "simple-router",
+  "name": "server-method",
   "version": "1.0.0",
-  "description": "Learning simple nodejs routing",
+  "description": "Learning routing with HHTP methods",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,10 @@
   "keywords": [
     "Routing",
     "HTTP",
-    "server"
+    "HTTP methods",
+    "server",
+    "API"
+
   ],
   "author": "Muhammad Ibrahim",
   "license": "MIT",
