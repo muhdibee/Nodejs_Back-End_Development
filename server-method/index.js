@@ -18,6 +18,15 @@ const SERVER = http.createServer((req, res) => {
     // }else if (req.url === '/books' && req.method === 'DELET'){
     //     deleteBook(req, res);
     // } */
+    else if(req.url === '/' && req.method === 'GET'){
+        res.writeHead(200);
+        res.end('You are welcome');
+    }
+    else {
+        res.writeHead(400);
+        res.end(`Request "${req.url}" not found.`);
+    }
+
 
 });
 
