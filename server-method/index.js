@@ -13,9 +13,10 @@ const SERVER = http.createServer((req, res) => {
         getAllBooks(req, res);
      }else if (req.url === '/books' && req.method === 'POST'){
          addBook(req, res);
-     }/*else if (req.url === '/books' && req.method === 'PUT'){
-    /*     UpdateBook(req, res);
-    // }else if (req.url === '/books' && req.method === 'DELET'){
+     }else if (req.url === '/books' && req.method === 'PUT'){
+        UpdateBook(req, res);
+     }
+    /*else if (req.url === '/books' && req.method === 'DELETE'){
     //     deleteBook(req, res);
     // } */
     else if(req.url === '/' && req.method === 'GET'){
@@ -80,6 +81,56 @@ function addBook(req, res){
         })
     });
 }
+
+
+//Update a book using /books
+function UpdateBook(req, res){
+    const body = []
+    req.on('data', (chunk) => {
+        body.push(chunk);
+    });
+    req.on('end', () => {
+        const parsedbody = Buffer.concat(body).toString();
+        const bookDetailsToUpdate = JSON.parse(parsedbody);
+        // console.log(bookDetailsToUpdate);
+        fs.readFile(bookDbPath, 'utf-8', (err, data) => {
+            if(err){
+                console.log(err);
+                res.writeHead(500);
+                res.end('Fail to read bookDbPath')
+            }else {
+                const books = JSON.parse(data);
+                // console.log('Line 103', currentBooks)
+                const IndexOfbookToUpdate = books.findIndex((book) => book.id == bookDetailsToUpdate.id);
+
+                if(IndexOfbookToUpdate == -1){
+                    res.writeHead(400);
+                    res.end('Book not found ');
+                    return;
+                }else {
+                    // console.log(IndexOfbookToUpdate);
+                    const updatedBook = {...books[IndexOfbookToUpdate], ...bookDetailsToUpdate};
+                    // console.log(updatedBook);
+                    // Update books
+                    books[IndexOfbookToUpdate] = updatedBook
+                    fs.writeFile(bookDbPath, JSON.stringify(books), (err) => {
+                        if(err){
+                            console.log(err);
+                            res.writeHead(500);
+                            res.end('Fail to update bookDbPath.')
+                        }else {
+                            console.log('Update success.')
+                            res.end(JSON.stringify(updatedBook))
+                        }
+                    })
+                }
+            }
+        })
+    })
+}
+
+
+
 
 
 
