@@ -20,9 +20,14 @@
   { "title": "My new book", "author": "Rising Odegua", "year": 2022, "id": 4 },
   {
     "title": "Things fall apart",
-    "author": "Chinwe Achebe",
+    "author": "Chinua Achebe",
     "year": 2000,
     "id": 5
   },
-  { "title": "My new book", "author": "Nura Ibrahim", "year": 2022, "id": 6 }
+  {
+    "title": "My updated book",
+    "author": "Muhammad Ibrahim",
+    "year": 2022,
+    "id": 6
+  }
 ]
