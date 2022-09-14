@@ -15,12 +15,12 @@ function authenticateUser(req, res) {
 			const parsedbody = Buffer.concat(body).toString();
 
 			if (!parsedbody) {
-				reject("No username or password provided");
+				reject({ statusCode: 400, message: "No username or password provided" });
 			} else {
 				const userDetails = JSON.parse(parsedbody);
 				fs.readFile(usersDbPath, "utf-8", (err, data) => {
 					if (err) {
-						reject("Error in reading userDb path");
+						reject({ statusCode: 500, message: "Error in reading userDb path, Please try again later" });
 					} else {
 						const allUsers = JSON.parse(data);
 						const userFound = allUsers.find((user) => user.username === userDetails.username);
@@ -29,7 +29,7 @@ function authenticateUser(req, res) {
 								resolve();
 							}
 						}
-						reject("Wrong username or Password");
+						reject({ statusCode: 400, message: "Wrong username or Password" });
 					}
 				});
 			}

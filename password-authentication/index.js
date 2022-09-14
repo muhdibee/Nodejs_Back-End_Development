@@ -17,8 +17,8 @@ const SERVER = http.createServer((req, res) => {
 				getAllBooks(req, res);
 			})
 			.catch((err) => {
-				res.writeHead(400);
-				res.end(JSON.stringify({ message: err }));
+				res.writeHead(err.statusCode);
+				res.end(JSON.stringify({ message: err.message }));
 			});
 	} else if (req.url === "/books" && req.method === "POST") {
 		addBook(req, res);
