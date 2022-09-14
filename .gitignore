@@ -4,3 +4,4 @@
 /simple-router/node_modules
 /server-method/node_modules
 /password-authentication/node_modules
+/token-based-authentication/node_modules

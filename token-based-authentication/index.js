@@ -21,11 +21,37 @@ const SERVER = http.createServer((req, res) => {
 				res.end(JSON.stringify({ message: err.message }));
 			});
 	} else if (req.url === "/books" && req.method === "POST") {
+		// Authenticate user.
+		authenticateUser(req, res)
+			.then(() => {
+				getAllBooks(req, res);
+			})
+			.catch((err) => {
+				res.writeHead(err.statusCode);
+				res.end(JSON.stringify({ message: err.message }));
+			});
+
 		addBook(req, res);
 	} else if (req.url === "/books" && req.method === "PUT") {
-		UpdateBook(req, res);
+		// Authenticate user.
+		authenticateUser(req, res)
+			.then(() => {
+				UpdateBook(req, res);
+			})
+			.catch((err) => {
+				res.writeHead(err.statusCode);
+				res.end(JSON.stringify({ message: err.message }));
+			});
 	} else if (req.url === "/books" && req.method === "DELETE") {
-		deleteBook(req, res);
+		// Authenticate user.
+		authenticateUser(req, res)
+			.then(() => {
+				deleteBook(req, res);
+			})
+			.catch((err) => {
+				res.writeHead(err.statusCode);
+				res.end(JSON.stringify({ message: err.message }));
+			});
 	} else if (req.url === "/" && req.method === "GET") {
 		res.writeHead(200);
 		res.end("You are welcome");
