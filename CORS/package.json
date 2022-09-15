@@ -1,0 +1,25 @@
+{
+  "name": "server-method",
+  "version": "1.0.0",
+  "description": "Learning routing with HHTP methods",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "Routing",
+    "HTTP",
+    "HTTP methods",
+    "server",
+    "API"
+  ],
+  "author": "Muhammad Ibrahim",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.2"
+  }
+}
