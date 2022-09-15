@@ -11,16 +11,17 @@ const PORT = 3000;
 //Create a server.
 const SERVER = http.createServer((req, res) => {
 	//On the second paremeter of the setHeader(), pass in the address you wish to allow
+	console.log(req.headers.origin) // Get the URL of incomming request
 	res.setHeader('Access-Control-Allow-Origin', 'http://127.0.0.30:3001');
 	if (req.url === "/books" && req.method === "GET") {
-		authenticateUser(req, res)
-			.then(() => {
+		// authenticateUser(req, res)
+		// 	.then(() => {
 		getAllBooks(req, res);
-		})
-		.catch((err) => {
-			res.writeHead(err.statusCode);
-			res.end(JSON.stringify({ message: err.message }));
-		});
+		// })
+		// .catch((err) => {
+		// 	res.writeHead(err.statusCode);
+		// 	res.end(JSON.stringify({ message: err.message }));
+		// });
 	} else if (req.url === "/books" && req.method === "POST") {
 		// Authenticate user.
 		authenticateUser(req, res)

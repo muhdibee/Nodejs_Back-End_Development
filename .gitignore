@@ -6,3 +6,5 @@
 /password-authentication/node_modules
 /token-based-authentication/node_modules
 /password-ACL-authentication/node_modules
+/CORS/node_modules
+
