@@ -1,0 +1,19 @@
+{
+  "name": "test-driven-development",
+  "version": "1.0.0",
+  "description": "Learning test driven development",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "Testing",
+    "Jest",
+    "Unit testing"
+  ],
+  "author": "Muhammad Ibrahim",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.3"
+  }
+}
