@@ -1,7 +1,7 @@
 This application performs some simple math operations.
 
 ## API
-- `add`
+- `sum`
 - `sub`
 - `mul`
 - `pow`
