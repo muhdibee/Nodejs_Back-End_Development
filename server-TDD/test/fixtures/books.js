@@ -19,7 +19,7 @@
 	},
 	{
 		title: "My new book",
-		author: "Rising Odegua",
+		author: "Muhamad Ibrahim",
 		year: 2022,
 		id: 4,
 	},
