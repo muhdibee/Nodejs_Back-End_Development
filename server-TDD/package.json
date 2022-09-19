@@ -1,0 +1,21 @@
+{
+  "name": "server-tdd",
+  "version": "1.0.0",
+  "description": "Testing out API server",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "API",
+    "Testing",
+    "Interation",
+    "Unit"
+  ],
+  "author": "Muhammad Ibrahim",
+  "license": "MIT"
+}
