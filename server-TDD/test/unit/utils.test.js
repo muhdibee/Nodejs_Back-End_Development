@@ -1,5 +1,5 @@
 const utils = require("../../utils");
-const books = require("../fixtures/books.json");
+const books = require("../fixtures/books");
 
 // beforeAll(() => {
 //     console.log("Before all Tests")

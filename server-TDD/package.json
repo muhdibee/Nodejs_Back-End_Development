@@ -17,5 +17,9 @@
     "Unit"
   ],
   "author": "Muhammad Ibrahim",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.3",
+    "supertest": "^6.2.4"
+  }
 }
