@@ -2,7 +2,7 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
-const booksDbPath = path.join(__dirname, "db", "books.json");
+const booksDbPath = path.join(__dirname, "test", "fixtures", "books.json");
 let booksDB = [];
 
 const PORT = 4000;
