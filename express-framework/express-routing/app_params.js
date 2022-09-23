@@ -56,6 +56,28 @@ app.use("/users/:id", (req, res) => {
 	}
 });
 
+// Grab multiple params from a url using colon.
+app.get("/users/:id/:name", (req, res) => {
+	const id = req.params.id;
+	const name = req.params.name;
+	const user = users.find((user) => user.id === parseInt(id) && user.name === name);
+	if (!user) {
+		res.status(404).send("User not found");
+	}
+	res.json(user);
+});
+
+// Use regular expression to explicitly match a url pattern.
+app.get("/post/id([1-9]+)", (req, res) => {
+	const id = req.params.id;
+	const post = posts.find((post) => post.id === parseInt(id));
+
+	if (!post) {
+		res.status(404).send("Post not found");
+	}
+	res.json(post);
+});
+
 app.listen(PORT, () => {
 	console.log(`App listening on port ${PORT}`);
 });
