@@ -78,6 +78,20 @@ app.get("/post/id([1-9]+)", (req, res) => {
 	res.json(post);
 });
 
+// Get query params
+app.get("/query", (req, res) => {
+	const name = req.query.name;
+	const age = req.query.age;
+	res.send(`Hello ${name}! You are ${age} years old.`);
+});
+
+// Get body params
+app.post("/profile", (req, res) => {
+	const name = req.body.name;
+	const age = req.body.age;
+	res.send(`Hello ${name}! You are ${age} years old.`);
+});
+
 app.listen(PORT, () => {
 	console.log(`App listening on port ${PORT}`);
 });
