@@ -92,6 +92,11 @@ app.post("/profile", (req, res) => {
 	res.send(`Hello ${name}! You are ${age} years old.`);
 });
 
+//catch all route
+app.get("*", (req, res) => {
+	res.status(404).send("Page not found");
+});
+
 app.listen(PORT, () => {
 	console.log(`App listening on port ${PORT}`);
 });
