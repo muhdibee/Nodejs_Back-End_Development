@@ -1,3 +1,4 @@
+.gitignore
 /node_modules/
 /introduction-to-nodejs/node_modules/
 /simple-server/node_modules
@@ -10,3 +11,5 @@
 /express-framework/express-middleware/node_modules
 /express-framework/express-routing/node_modules
 /express-framework/express-router/node_modules
+/express-framework/express-views/node_modules
+/express-framework/express-error-handling/node_modules
