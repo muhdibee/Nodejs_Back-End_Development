@@ -14,3 +14,4 @@
 /express-framework/express-views/node_modules
 /express-framework/express-error-handling/node_modules
 /express-databases/express-mongodb/node_modules
+/express-databases/express-mongodb/.env
