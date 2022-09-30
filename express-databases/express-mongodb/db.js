@@ -3,6 +3,7 @@ require("dotenv").config();
 
 const MONGODB_CONNECTION_URL = process.env.MONGODB_CONNECTION_URL;
 
+// Connect to mongodb;
 const connectionToMongoDB = () => {
 	mongoose.connect(MONGODB_CONNECTION_URL);
 

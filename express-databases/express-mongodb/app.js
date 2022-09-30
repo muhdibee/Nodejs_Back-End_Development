@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT;
 
 // Connecting to mongodb instance.
-connectionToMongoDB();
+// connectionToMongoDB();
 
 app.use(logger("dev"));
 app.use(express.json());
