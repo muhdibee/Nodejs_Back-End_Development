@@ -1,34 +1,34 @@
 const mongoose = require("mongoose");
 
 // Define a schema
-const books = new mongoose.Schema({
+const booksSchema = new mongoose.Schema({
 	title: {
 		type: String,
-		required,
+		required: true,
 	},
 	shortDescription: {
 		type: String,
 		max: [150, "Most not be more than 150 characters."], //validation with custom message
-		required,
+		required: true,
 	},
 	year: {
 		type: Number,
 		max: [2022, "Must not be greater than 2022."],
-		required,
+		required: true,
 	},
 	isbn: {
-		type: String,
-		required,
+		type: Number,
+		required: true,
 		unique: [true, "ISBN must be unique."],
 	},
 	price: {
 		type: Number,
-		required,
+		required: true,
 		min: [0, "Price most not be less than 0."],
 	},
 	createdAt: {
 		type: Date,
-		required,
+		required: true,
 	},
 	lastUpdatedAt: {
 		type: Date,
@@ -36,4 +36,4 @@ const books = new mongoose.Schema({
 	},
 });
 
-module.exports = mongoose.model("Books", books); // Collection name is books, this is the name of the name of the collection in the database
+module.exports = mongoose.model("books", booksSchema); // Collection name is books, this is the name of the name of the collection in the database
