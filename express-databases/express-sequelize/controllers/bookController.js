@@ -6,7 +6,7 @@ const BookModel = db.books;
 // Add CRUD controller function.
 async function getBooks(req, res, next) {
 	try {
-		const books = BookModel.findAll();
+		const books = await BookModel.findAll();
 		res.status(200).send(books);
 	} catch (err) {
 		next(err);
@@ -15,9 +15,11 @@ async function getBooks(req, res, next) {
 
 async function getBookById(req, res, next) {
 	const bookId = req.params.id;
+	console.log(bookId);
 	try {
-		const book = BookModel.findByPK(bookId);
+		const book = await BookModel.findByPk(bookId);
 		res.status(200).json(book);
+		console.log(book);
 	} catch (err) {
 		next(err);
 	}
@@ -26,7 +28,7 @@ async function getBookById(req, res, next) {
 async function addBook(req, res, next) {
 	const book = req.body;
 	try {
-		const books = BookModel.create(book);
+		const books = await BookModel.create(book);
 		res.status(201).json(books);
 	} catch (err) {
 		next(err);
@@ -37,7 +39,7 @@ async function updateBook(req, res, next) {
 	const bookId = req.params.id;
 	const bookUpdate = req.body;
 	try {
-		const book = BookModel.findByPk(bookId);
+		const book = await BookModel.findByPk(bookId);
 		if (book) {
 			await book.update(bookUpdate);
 			res.status(200).json(book);
@@ -52,7 +54,7 @@ async function updateBook(req, res, next) {
 async function deleteBook(req, res, next) {
 	const bookId = req.params.id;
 	try {
-		const book = BookModel.findByPk(bookId);
+		const book = await BookModel.findByPk(bookId);
 		if (book) {
 			await book.destroy();
 			res.status(200).json(book);

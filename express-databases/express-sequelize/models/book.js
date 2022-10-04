@@ -15,8 +15,12 @@ module.exports = (sequelize, DataTypes) => {
 				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
-			isbn: {
+			shortDescription: {
 				type: DataTypes.STRING,
+				allowNull: false,
+			},
+			isbn: {
+				type: DataTypes.INTEGER,
 				allowNull: false,
 			},
 		},
