@@ -1,4 +1,3 @@
-.gitignore
 /node_modules/
 /introduction-to-nodejs/node_modules/
 /simple-server/node_modules
@@ -15,3 +14,5 @@
 /express-framework/express-error-handling/node_modules
 /express-databases/express-mongodb/node_modules
 /express-databases/express-mongodb/.env
+/express-databases/express-sequelize/node_modules
+/express-databases/express-sequelize/.env
