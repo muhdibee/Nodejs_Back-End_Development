@@ -36,8 +36,8 @@ const BookSchema = new Schema({
 	},
 });
 
-// Create a mongoose model
-const BookModel = mongoose.model("Books", BookSchema); //collection name is Books. This is the name of the collection in the database
+// Create a mongoose BookModel
+const BookModel = mongoose.model("Books", BookSchema); //collection name is Books. This is the name of the collection in the database.
 
 // Export the model as a module.
 module.exports = BookModel;
