@@ -16,3 +16,5 @@
 /express-databases/express-mongodb/.env
 /express-databases/express-sequelize/node_modules
 /express-databases/express-sequelize/.env
+/express-databases/express-auth_session/node_modules
+/express-databases/express-auth_session/.env
