@@ -7,19 +7,19 @@ const Schema = mongoose.Schema;
 const BookSchema = new Schema({
 	title: {
 		type: String,
-		required,
+		required: [true, "Title is required."],
 	},
 	shortDescription: {
 		type: String,
 	},
 	year: {
 		type: Number,
-		required: true,
+		required: [true, "Year is required."],
 	},
 	isbn: {
 		type: String,
 		required: true,
-		unique: [true, "ISBN must be unique"], //validation with custom message
+		unique: [true, "ISBN must be unique."], //validation with custom message
 	},
 	price: {
 		type: Number,
