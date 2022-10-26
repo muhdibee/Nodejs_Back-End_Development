@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const booksRoute = require("./routes/books");
 const authRoute = require("./routes/auth");
 
-require("./db").connectToMongoDB(); // Connect to MongoDB
+require("./dbConnection").connectToMongoDB(); // Connect to MongoDB
 require("dotenv").config();
 
 require("./authentication/auth"); // Signup and login authentication middleware
