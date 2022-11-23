@@ -1,6 +1,6 @@
 const express = require("express");
-const bookModel = require("../models/books");
-const bookValidation = require("../validators/book.validator");
+const bookModel = require("../models/booksModel");
+const bookValidation = require("../validators/bookValidator");
 
 const bookRouter = express.Router();
 

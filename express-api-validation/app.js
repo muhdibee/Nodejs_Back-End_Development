@@ -1,13 +1,12 @@
 const express = require("express");
 const db = require("./db");
+const booksRoute = require("./routes/booksRouter");
 
 const PORT = 3000;
 const app = express();
 
 // Connect to MongoDB
 db.connectToMongoDB();
-
-const booksRoute = require("./routes/books");
 
 app.use(express.static("public"));
 app.use(express.json());

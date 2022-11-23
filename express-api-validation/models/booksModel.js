@@ -26,7 +26,7 @@ const BookSchema = new Schema({
 	price: {
 		type: Number,
 		required: true,
-		min: [0, "Price must be greater than or equal to 0"], //validation with custom message
+		min: [0, "Price must be greater than or equal to 0"], //validation with custom message.
 	},
 	createAt: {
 		type: Date,
