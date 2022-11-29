@@ -15,6 +15,7 @@ const validateBook = async (req, res, next) => {
 		next();
 	} catch (err) {
 		console.log("Error", err.details[0].message);
+		return res.status(406).send(err.details[0].message);
 	}
 };
 
